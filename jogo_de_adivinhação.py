@@ -1,11 +1,11 @@
 import random
 
 max_tentativas = 5 #esta variável representa o número máximo de tentativas que o usuário terá para vencer o jogo
-palavras_secretas = ['abacaxi', 'melão', 'banana', 'jaca', 'tomate'] #aqui está a lista de possíveis palavras secretas
+palavras_secretas = ['abacaxi', 'melão', 'banana', 'jaca', 'tomate', 'maçã'] #aqui está a lista de possíveis palavras secretas
 
 while True: #esta operação significa que o programa se repetirá até que alguma condição faça com que ele pare de rodar
     palavra_secreta = random.choice(palavras_secretas) #aqui a função 'random.choice' escolhe aleatóriamente um item da lista de 'palavras_secretas' para ser a 'palavra_secreta'
-    tentativa = input(f'Tente adivinhar a palavra secreta, você tem ({max_tentativas}) tentativas: ').lower() #aqui, o usuário terá a sua primeira chance de adivinhar a palavra, junto com um contador de tentativas
+    tentativa = input(f'Tente adivinhar a palavra secreta, você tem ({max_tentativas}) tentativas e a palavra é o nome de uma fruta: ').lower() #aqui, o usuário terá a sua primeira chance de adivinhar a palavra, junto com um contador de tentativas
     palpite = '' #variável que irá armazenar as palavras que o usuário inserir
     tentativas_restantes = max_tentativas -1 #contador que exibe o número de tentativas restantes e diminui '1' cada vez que o loop é executado
 
