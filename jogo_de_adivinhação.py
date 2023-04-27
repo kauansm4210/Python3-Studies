@@ -13,11 +13,11 @@ while True: #esta operação significa que o programa se repetirá até que algu
         print('Parabéns, você acertou a palavra secreta! ')
     else:
         while palpite != palavra_secreta and tentativas_restantes > 0:
-            input(f'Tente novamente, ({tentativas_restantes}) tentativas restantes. ').lower()
+            palpite = input(f'Tente novamente, ({tentativas_restantes}) tentativas restantes. ').lower()
             tentativas_restantes -= 1
     #as 5 linhas de código acima representam as duas possíveis condições para que o programa consiga se repetir ou ser finalizado
         if palpite == palavra_secreta:
-            print(f'Parabéns, você acertou a palavra secreta em ({int(tentativas_restantes - max_tentativas)})')
+            print(f'Parabéns, você acertou a palavra secreta em ({int(max_tentativas - tentativas_restantes)}) tentativas.')
         else:
             print('Suas tentativas chegaram ao fim, reinicie o jogo...')
     jogar_novamente = input('Gostaria de tentar novamente? (s/n) ')
